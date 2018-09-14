@@ -7,7 +7,7 @@ import FooterNav from './FooterNav'
 
 const PageTemplate = (props) => {
   // if a featured img is provided, set the imgUrl const to that - otherwise use a generic campus one
-  const imgUrl = props.page.img ? 'https://public.unitedlutheranseminary.org' + props.page.img.data.url : 'https://public.unitedlutheranseminary.org/catalog-admin/storage/uploads/00000000022.jpg'
+  const imgUrl = props.page.img ? 'https://public.unitedlutheranseminary.org' + props.page.img.data.url : 'https://public.unitedlutheranseminary.org/catalog-admin/storage/uploads/00000000029.jpg'
   return (
     <div className="site-content">
       <Hero title={props.page.title} imgUrl={imgUrl} />

@@ -64,18 +64,19 @@ class App extends Component {
     // load the degree programs
     axios.get('https://public.unitedlutheranseminary.org/catalog-admin/api/1.1/tables/degree-programs/rows', auth)
       .then(res => {
-        this.setState({ programs: res.data.data })
+        const degree_programs_unsorted = res.data.data
+
+        // sort the pages by their order value, assigned in the CMS
+        const degree_programs = degree_programs_unsorted.sort(sortByOrder)
+
+        this.setState({ programs: degree_programs })
       })
   }
 
   prepHomepage = (props) => {
-    // the IDs of pages we want to feature in boxes on the homepage
-    const pagesToInclude = [1,2,6]
-    // filter all pages and return these 4
-    const homeBoxPages = this.state.pages.filter(page => pagesToInclude.indexOf(page.id) !== -1 )
-    // return the homepage component with the pages passed as a prop
+    // return the homepage component with all pages passed as a prop
     return (
-      <Homepage pages={homeBoxPages} {...props} />
+      <Homepage pages={this.state.pages} {...props} />
     );
   }
 
@@ -93,6 +94,8 @@ class App extends Component {
       const MyDegreeProgramsTemplate = (props) => (
         <DegreeProgramsTemplate
           degrees={this.state.programs}
+          page={single}
+          pages={this.state.pages}
           {...props}
           />
       )

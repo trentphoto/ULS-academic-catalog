@@ -1,0 +1,39 @@
+$light-0: #ffffff;
+$light-1: darken($light-0, 5%);
+$light-2: darken($light-0, 10%);
+$light-3: darken($light-0, 15%);
+$gradient-blue: linear-gradient(135deg, #5a6a8e, $primary);
+
+.l_ResponsiveTable{
+  width: 100%;
+  overflow-x: scroll;
+}
+
+.ResponsiveTable {
+  font-size: 14px;
+  line-height: 1.4rem;
+  th, td {
+    padding: 8px 20px;
+  }
+  tbody tr:nth-child(even) {
+    background-color: $light-1;
+  }
+  tbody tr:nth-child(odd) {
+    background-color: $light-0;
+  }
+  tbody tr:hover {
+    background-color: $light-2;
+  }
+  tbody tr:first-child {
+    background: $gradient-blue;
+    color: white;
+  }
+  tfoot {
+    background-color: $light-3;
+  }
+  th {
+  }
+  // &:after {
+  //   content: 'scroll horizontally >'
+  // }
+}

@@ -4,9 +4,9 @@
   position: relative;
   background-size: cover;
   background-position: center center;
-  background-attachment: fixed;
+  // background-attachment: fixed;
   &_home {
-    height: 200px;
+    height: 300px;
   }
   &__overlay {
     position: absolute;

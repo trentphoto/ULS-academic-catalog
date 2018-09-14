@@ -5,6 +5,7 @@ import { Helmet } from 'react-helmet'
 import DegreeSingle from './DegreeSingle'
 
 import Hero from './Hero'
+import FooterNav from './FooterNav'
 
 
 
@@ -18,13 +19,13 @@ const DegreeProgramsTemplate = (props) => {
       />
   )
 
-  const imgUrl = 'https://public.unitedlutheranseminary.org/catalog-admin/storage/uploads/00000000022.jpg'
+  const imgUrl = 'https://public.unitedlutheranseminary.org/catalog-admin/storage/uploads/00000000029.jpg'
   return (
     <React.Fragment>
       <div className="site-content">
         <Helmet title="Degree Programs" />
         <Hero title="Degree Programs" imgUrl={imgUrl} />
-        <nav className="navbar navbar-expand navbar-light bg-light">
+        <nav className="navbar navbar-light bg-light">
           <div className="container">
             <ul className="navbar-nav px-5">
               <li className="nav-item">
@@ -67,6 +68,7 @@ const DegreeProgramsTemplate = (props) => {
             </div>
           </div>
         </section>
+        <FooterNav currentPage={props.page} pages={props.pages} />
       </div>
     </React.Fragment>
   );

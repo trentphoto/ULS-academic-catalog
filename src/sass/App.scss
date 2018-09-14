@@ -1,5 +1,7 @@
 @import "bootstrap/bootstrap.scss";
 
+@import url('https://fonts.googleapis.com/css?family=Lora:400i,Lato:700');
+
 $z-index-1: 100;
 $z-index-2: 200;
 $z-index-3: 300;
@@ -15,6 +17,7 @@ $z-index-5: 500;
 @import "components/overlay";
 @import "components/scrollspy";
 @import "components/FooterNav";
+@import "components/ResponsiveTable";
 
 *, *::after, *::before {
   box-sizing: border-box;
@@ -30,10 +33,12 @@ html, body {
 
 main {
   display: flex;
+  width: 100%;
 }
 
 .site-content {
   width: 100%;
+  // overflow: hidden;
 }
 
 .post-content {
@@ -46,6 +51,27 @@ main {
     @include hover {
       border-bottom-width: 4px;
     };
+  }
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  // typography
+  h1 {
+    color: $primary;
+    font-family: 'Lato';
+    font-weight: 700;
+  }
+  h2 {
+    font-size: 40px;
+    font-family: 'Lora';
+    font-style: italic;
+    font-weight: 400;
+  }
+  h3 {
+    font-family: 'Lato';
+    font-weight: 700;
+    color: $primary;
   }
 }
 
