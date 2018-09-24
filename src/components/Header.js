@@ -16,7 +16,7 @@ class Header extends React.Component {
           className="Header__logo"
           alt={`Logo`}
         />
-        <span className="Header__title">Academic Catalog 2018</span>
+        <span className="Header__title">Academic Catalog 2018-19</span>
         <div className="btn btn-primary btn_print">
           <FontAwesomeIcon icon="print" className="mr-2" />
           <span>

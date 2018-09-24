@@ -6703,20 +6703,32 @@ button.close {
     transition: bottom 0.1s ease-out, transform 0.22s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1); }
 
 .FeatureCard {
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
   border-bottom: none !important;
   border: none !important;
   margin-bottom: 2rem;
   border-radius: 5px !important;
   overflow: hidden;
-  transition: 400ms cubic-bezier(0.3, 0, 0.3, 1) all; }
+  position: relative;
+  transition: 200ms cubic-bezier(0.3, 0, 0.3, 1) all; }
+  .FeatureCard:after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 10px;
+    height: 100%;
+    background-color: #434f69;
+    opacity: .97;
+    transition: 250ms cubic-bezier(0.6, 0, 0.4, 1) width;
+    z-index: 2; }
+  .FeatureCard:hover:after {
+    width: 100%; }
   .FeatureCard .card-title {
     z-index: 3;
     position: relative; }
   @media (hover: hover) {
     .FeatureCard:hover {
-      box-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
-      transform: translateY(-5px);
       text-decoration: none; } }
 
 .overlay {
