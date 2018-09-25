@@ -100,8 +100,8 @@ class App extends Component {
           />
       )
 
-      switch (single.order) {
-        case 11:
+      switch (single.slug) {
+        case 'degree-programs':
           return <Route key={single.order} path={'/' + single.slug} render={MyDegreeProgramsTemplate} />;
         break; // eslint-disable-line
         default:
