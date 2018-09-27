@@ -6814,6 +6814,10 @@ main {
   display: flex;
   width: 100%; }
 
+small {
+  font-size: .8rem;
+  line-height: 1rem; }
+
 .site-content {
   width: 100%; }
 

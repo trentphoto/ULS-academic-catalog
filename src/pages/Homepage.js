@@ -18,6 +18,11 @@ const Homepage = (props) => (
             }
           </div>
         </div>
+        <div className="row">
+          <div className="col-12 font-italic">
+            <small>The Seminary Catalog is a statement of the policies, personnel, programs, and financial arrangements of United Lutheran Seminary as projected by the responsible authorities of the Seminary. The Seminary reserves the right to make alterations without prior notice, in accordance with the Seminary’s institutional needs and academic purposes.</small>
+          </div>
+        </div>
       </div>
     </section>
   </div>
