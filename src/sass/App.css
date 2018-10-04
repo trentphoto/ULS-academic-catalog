@@ -6842,7 +6842,8 @@ small {
     font-size: 40px;
     font-family: 'Lora';
     font-style: italic;
-    font-weight: 400; }
+    font-weight: 400;
+    margin-top: 3rem; }
   .post-content h3 {
     font-family: 'Lato';
     font-weight: 700;
