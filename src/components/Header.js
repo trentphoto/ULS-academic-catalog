@@ -17,12 +17,12 @@ class Header extends React.Component {
           alt={`Logo`}
         />
         <span className="Header__title">Academic Catalog 2018-19</span>
-        <div className="btn btn-primary btn_print">
+        <a href="https://unitedlutheranseminary.edu/wp-content/uploads/2018/10/ULS-Academic-Catalog-2018-19.pdf" className="btn btn-primary btn_print">
           <FontAwesomeIcon icon="print" className="mr-2" />
           <span>
-            Print Catalog
+            Printable PDF Catalog
           </span>
-        </div>
+        </a>
       </header>
     )
   }
